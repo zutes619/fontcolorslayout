@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Mali');
+
+/* You must use a DIFFERENT FONT THAT THIS ONE as your webfont */
+
+
+/*************************************************
+            DEFAULTS
+*************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    /* change this font stack to your own choices */
+    line-height: 1.5;
+}
+
+p {}
+
+a {}
+
+ul {}
+
+ol {}
+
+li {}
+
+img {
+    width: 25%;
+}
+
+
+/*************************************************
+            HEADER
+*************************************************/
+
+header {
+    padding: 1rem 2rem;
+    color: black;
+    text-align: center;
+    background-image: url(1.jpg);
+}
+
+header > h1 {
+    font-size: 50px
+}
+
+header > h2 {
+    font-size: 50px
+}
+
+
+/*************************************************
+            NAVMENU
+*************************************************/
+
+nav {
+    overflow: hidden;
+    height: 280px;
+    margin: 0 2px;
+    display: flex;
+    justify-content: space-around;
+    float: center;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 35px;
+    background-color: dimgrey;
+}
+
+nav > a,
+nav > a:visited,
+nav > a:link {}
+
+nav > a:active,
+nav > a:focus,
+nav > a:hover {
+    background-color: antiquewhite;
+}
+
+
+/*************************************************
+            MAIN CONTENT
+*************************************************/
+
+main {
+    padding: 1rem 2rem;
+    display: grid;
+}
+
+section {
+    font-family: 'Mali', cursive, Sans-Serif;
+    text-decoration: none;
+    color: #008CBA;
+    
+}
+
+section p {
+    text-align: justify
+        text-decoration: none;
+    color: black;
+}
+
+section p img {
+    height: 200px;
+    width: 50%;
+}
+
+
+/*************************************************
+            FOOTER
+*************************************************/
+
+footer {
+    padding: 1rem 2rem;
+}
+
+.foot nav {
+    border: 10px solid black;
+    background-color: lightgray;
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+    height: 250px;
+    
+  
+    
+   
+}
+
+.foot section {
+    max-width: m90100px;
+    text-align: center;
+    
+}
+
+.foot dl {
+    display: flex;
+    flex-direction: column;
+}
+
+.foot dt {
+    border-style: solid;
+    border-color: coral;
+}
+
+.foot dd {
+    border-color: coral;
+}
+
+.foot dd a,
+.foot dd a:visited {}
+
+.foot dd a:active,
+.foot dd a:focus,
+.foot dd a:hover {background-color: springgreen;}
+
+
+/*************************************************
+            MEDIA QUERIES for layout
+*************************************************/
+
+@media (max-width: 599px) {
+    nav {
+        display: grid;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    section {
+        text-decoration: none;
+    color: greenyellow;
+    }
+}
+
+@media (min-width: 600px) and (max-width:999px) {
+    section {
+        display: flex;
+        float: center;
+        flex-direction: column;
+    }
+    .foot nav {}
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: justify
+    }
+    .first {
+        grid-column: 1/span 3;
+    }
+    section {
+        text-decoration: none;
+    color: lightskyblue;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+    }
+    .foot nav {
+        position: absolute;
+        padding: 30px;
+    }
+    section  {
+      text-decoration: none;
+    color: gold;
+    }
+}
